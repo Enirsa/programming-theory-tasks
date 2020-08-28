@@ -9,6 +9,11 @@ from urm.utils import (
 
 
 def create_recursion(f, g, arg_count):
+    """
+    Generates function h(X, y) satisfying the recursion equations:
+    h(X, 0) = f(X)
+    h(X, y + 1) = g(X, y, h(X, y)).
+    """
     recursion = []
     extra_memory_length = arg_count + 3  # args, register with the result, y, counter
     max_memory_length = max(total_memory_used(f), total_memory_used(g))
