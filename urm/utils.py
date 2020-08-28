@@ -1,3 +1,6 @@
+from urm import Zero, Successor, Transfer, Jump
+
+
 def rewrite_jumps(program, jump_to):
     """
     Rewrites outer jump instructions to a given position.
